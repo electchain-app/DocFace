@@ -1,6 +1,7 @@
 # *DocFace*: Matching ID Document Photos to Selfies
 
-By Yichun Shi and Anil K. Jain, edited by Neeti
+By Yichun Shi and Anil K. Jain
+Personal adjustments for ElectChain by Neeti S.
 
 <img src="https://raw.githubusercontent.com/seasonSH/DocFace/master/figs/docface.png" width="600px">
 

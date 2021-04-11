@@ -51,23 +51,25 @@ def main(args):
     images = utils.preprocess(paths, config, False)
     switch = np.array([utils.is_typeB(p) for p in paths])
     print('%d type A images and %d type B images.' % (np.sum(switch), np.sum(~switch)))
+    # for im in images:
+    #     im = im.reshape(1, 112, 96, 3)
 
-
-    # Load model files and config file
+    print('NS: Load model files and config file')
+   # Load model files and config file
     if config.use_sibling:
         network = SiblingNetwork()
     else:
         network = BaseNetwork()
     network.load_model(args.model_dir)
 
-
+    print('NS: Run forward pass to calculate embeddings')
     # Run forward pass to calculate embeddings
     if config.use_sibling:
         embeddings = network.extract_feature(images, switch, args.batch_size, verbose=True)
     else:
         embeddings = network.extract_feature(images, args.batch_size, verbose=True)
 
-
+    print('NS: Output the extracted features')
     # Output the extracted features
     np.save(args.output, embeddings)
 

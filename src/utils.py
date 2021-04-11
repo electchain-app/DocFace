@@ -26,6 +26,7 @@ import sys
 import os
 import numpy as np
 from scipy import misc
+import imageio
 import imp
 import time
 import math
@@ -369,7 +370,7 @@ def preprocess(images, config, is_training=False):
         assert (config.channels==1 or config.channels==3)
         mode = 'RGB' if config.channels==3 else 'I'
         for image_path in image_paths:
-            images.append(misc.imread(image_path, mode=mode))
+            images.append(imageio.imread(image_path, pilmode=mode))
         images = np.stack(images, axis=0)
 
     # Process images

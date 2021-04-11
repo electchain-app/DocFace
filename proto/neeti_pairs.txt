@@ -1,0 +1,6 @@
+1	4
+neeti	1	2
+neeti	1	3
+neeti	1	4
+neeti	2	3
+neeti	1	abel 1

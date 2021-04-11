@@ -16,10 +16,10 @@ log_base_dir = './log/'
 summary_interval = 100
 
 # Training dataset path
-train_dataset_path = '/path/to/msceleb1m/dataset/folder'
+train_dataset_path = '../train_data/CASIA-WebFace/' #'/path/to/msceleb1m/dataset/folder'
 
 # Testing dataset path
-test_dataset_path = '/path/to/lfw/dataset/folder'
+test_dataset_path = '../train_data/lfw/' #'/path/to/lfw/dataset/folder'
 
 # LFW standard protocol file
 lfw_pairs_file = './proto/lfw_pairs.txt'
